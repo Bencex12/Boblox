@@ -71,7 +71,7 @@ player.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").RayParts
 end)
 
 
-local msc = serv:Channel("Misc")
+local msc = serv:Channel("Majszteriboksz")
 
 msc:Button("Old fel a cseszteket", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Chests.EnergyGymChest.Pad.CFrame
