@@ -47,6 +47,38 @@ game:GetService("RunService").RenderStepped:Connect(function()
 end)
 end)
 
+msc:Button("ELV ezzel gyorsabban kapod", function()
+function code()
+local plrN = game.Players.LocalPlayer.Name
+for i,v in pairs(game.Players[plrN].Backpack:GetChildren()) do
+if v.Name ~= "Combat" and v.Name ~= "LocalScript" and on == 1 then
+game.ReplicatedStorage.addStrength:FireServer(game.Players[plrN].Backpack[v.Name].Handle,99)
+end
+end
+end
+ 
+ 
+on = 1
+local UIS = game:GetService("UserInputService")
+UIS.InputBegan:connect(function(Input)
+local KeyCode = Input.KeyCode
+if KeyCode == Enum.KeyCode.F3 then
+   on = 1
+   wait(1)
+   while on == 1 do
+       game:GetService('RunService').Stepped:wait(0)
+       code()
+       end
+   end
+end)
+UIS.InputBegan:connect(function(Input)
+local KeyCode = Input.KeyCode
+if KeyCode == Enum.KeyCode.F4 then
+   on = 0
+   end
+end)
+end)
+
 auf:Toggle("Elvileg ezert nem basz ki",false, function(state)
 getgenv().safe = state
 
