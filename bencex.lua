@@ -73,7 +73,7 @@ end)
 
 local msc = serv:Channel("Szarhaziak")
 
-msc:Button("collect chests", function()
+msc:Button("Nyiss ládákat faszszopás", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Chests.EnergyGymChest.Pad.CFrame
 wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Chests.LightningGymChest.Pad.CFrame
