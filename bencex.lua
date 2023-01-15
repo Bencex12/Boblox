@@ -77,7 +77,6 @@ if KeyCode == Enum.KeyCode.F4 then
    on = 0
    end
 end)
-end)
 
 auf:Toggle("Elvileg ezert nem basz ki",false, function(state)
 getgenv().safe = state
