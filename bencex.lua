@@ -11,13 +11,13 @@ local player = game.Players.LocalPlayer
 
 local vim = game:GetService('VirtualInputManager')
 
-local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/Bencex12/Boblox/main/discordlib.txt")()
 
 local win = DiscordLib:Window(GetName.Name)
 
-local serv = win:Server("gui", "")
+local serv = win:Server("UNRAVELGANG", "")
 
-local auf = serv:Channel("farm")
+local auf = serv:Channel("csibeszkedjunk")
 
 local part = Instance.new("Part",workspace)
     part.Name = "BS"
@@ -71,7 +71,7 @@ player.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").RayParts
 end)
 
 
-local msc = serv:Channel("Misc")
+local msc = serv:Channel("Szarhaziak")
 
 msc:Button("collect chests", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Chests.EnergyGymChest.Pad.CFrame
@@ -90,14 +90,14 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Wo
 end)
 
 
-msc:Textbox("WalkSpeed", "Type here!", true, function(v)
+msc:Textbox("WalkSpeed", "ird ide buzikam!", true, function(v)
      game:GetService("Players").LocalPlayer.chosenSpeed.Value = v
      game:GetService("Players").LocalPlayer.usingChosenSpeed.Value = true
      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
 end)
 
 
-msc:Button("Infinity Jumps", function()
+msc:Button("Infinity faszveres", function()
 local InfiniteJumpEnabled = true
 game:GetService("UserInputService").JumpRequest:connect(function()
 	if InfiniteJumpEnabled then
