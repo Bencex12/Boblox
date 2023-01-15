@@ -30,7 +30,7 @@ local part = Instance.new("Part",workspace)
     part.BottomSurface = Enum.SurfaceType.Smooth
 
 
-auf:Toggle("Auto-Farm Energy",false, function(state)
+auf:Toggle("Farmolj szarhazi",false, function(state)
 getgenv().af = state
 
 game:GetService("RunService").RenderStepped:Connect(function()
@@ -47,7 +47,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 end)
 end)
 
-auf:Toggle("Safe Farm",false, function(state)
+auf:Toggle("Biztonsagos Farm",false, function(state)
 getgenv().safe = state
 
 player.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):FindFirstChild("BS").CFrame * CFrame.new(0,10,0)
@@ -66,14 +66,14 @@ game:GetService("RunService").RenderStepped:Connect(function()
 end)
 end)
 
-auf:Button("Koth", function()
+auf:Button("Koth TP", function()
 player.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").RayParts.KOTH.CFrame * CFrame.new(0,15,0)
 end)
 
 
 local msc = serv:Channel("Misc")
 
-msc:Button("collect chests", function()
+msc:Button("Old fel a cseszteket", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Chests.EnergyGymChest.Pad.CFrame
 wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Chests.LightningGymChest.Pad.CFrame
@@ -90,14 +90,14 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Wo
 end)
 
 
-msc:Textbox("WalkSpeed", "Type here!", true, function(v)
+msc:Textbox("SETASPEED", "Ird ide szarhazi!", true, function(v)
      game:GetService("Players").LocalPlayer.chosenSpeed.Value = v
      game:GetService("Players").LocalPlayer.usingChosenSpeed.Value = true
      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
 end)
 
 
-msc:Button("Infinity Jumps", function()
+msc:Button("Vegtelen ugras repulesxd", function()
 local InfiniteJumpEnabled = true
 game:GetService("UserInputService").JumpRequest:connect(function()
 	if InfiniteJumpEnabled then
