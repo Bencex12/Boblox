@@ -30,7 +30,7 @@ local part = Instance.new("Part",workspace)
     part.BottomSurface = Enum.SurfaceType.Smooth
 
 
-auf:Toggle("Farmolj cigany max kibasznak",false, function(state)
+auf:Toggle("Auto-Farm Energy",false, function(state)
 getgenv().af = state
 
 game:GetService("RunService").RenderStepped:Connect(function()
@@ -47,7 +47,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 end)
 end)
 
-auf:Toggle("Elvileg ezert nem basz ki",false, function(state)
+auf:Toggle("Safe Farm",false, function(state)
 getgenv().safe = state
 
 player.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):FindFirstChild("BS").CFrame * CFrame.new(0,10,0)
@@ -71,9 +71,9 @@ player.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").RayParts
 end)
 
 
-local msc = serv:Channel("Szarhaziak")
+local msc = serv:Channel("Misc")
 
-msc:Button("Nyiss ládákat faszszopás", function()
+msc:Button("collect chests", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Chests.EnergyGymChest.Pad.CFrame
 wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Chests.LightningGymChest.Pad.CFrame
@@ -90,14 +90,14 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Wo
 end)
 
 
-msc:Textbox("Seta Speed Attisnak", "ird ide buzikam!", true, function(v)
+msc:Textbox("WalkSpeed", "Type here!", true, function(v)
      game:GetService("Players").LocalPlayer.chosenSpeed.Value = v
      game:GetService("Players").LocalPlayer.usingChosenSpeed.Value = true
      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
 end)
 
 
-msc:Button("ez olyan hogy nem guggulsz le", function()
+msc:Button("Infinity Jumps", function()
 local InfiniteJumpEnabled = true
 game:GetService("UserInputService").JumpRequest:connect(function()
 	if InfiniteJumpEnabled then
